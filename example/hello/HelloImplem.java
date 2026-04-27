@@ -13,7 +13,15 @@ public class HelloImplem extends UnicastRemoteObject implements Hello {
         return "Hello, world!";
     }
 
-    public int soma (int a, int b) throws RemoteException {
+    public int soma(int a, int b) throws RemoteException {
         return a + b;
+    }
+
+    public int subtrai(int a, int b) throws RemoteException {
+        return a - b;
+    }
+
+    public String paraMaiusculo(String texto) throws RemoteException {
+        return (texto == null) ? "" : texto.toUpperCase();
     }
 }
